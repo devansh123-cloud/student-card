@@ -13,6 +13,11 @@ while True:
         name = input("Enter Student Name: ")
         marks = input("Enter Student Marks: ")
         grade = input("Enter Student Grade: ")
+        
+        name = name.strip()
+        marks = marks.strip()
+        grade = grade.strip()
+        roll_number = roll_number.strip()
 
         students[roll_number] = {
             "name": name,
@@ -24,6 +29,8 @@ while True:
 
     elif choice == "2":
         search_roll = input("Enter Roll Number to search: ")
+        
+        search_roll = search_roll.strip()
 
         if search_roll in students:
             print("👨‍🎓 Student Found:")
